@@ -1,0 +1,26 @@
+
+### Start job with sample
+POST http://localhost:8080/api/job
+Content-Type: text/plain
+
+./data/sample-arxiv-metadata-oai-snapshot.json
+
+
+### Start job with snapshot
+POST http://localhost:8080/api/job
+Content-Type: text/plain
+
+./arxiv_dataset/arxiv-metadata-oai-snapshot.json
+
+### Start job with snapshot, windows
+POST http://localhost:8080/api/job
+Content-Type: text/plain
+
+T:/DATASETs/arxiv_dataset/arxiv-metadata-oai-snapshot.json
+
+### Get job status, by jobId
+GET http://localhost:8080/api/job?id=5
+Content-Type: application/json
+
+### Generate articles from raw data
+POST http://localhost:8080/api/job/generate
